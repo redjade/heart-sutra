@@ -1,0 +1,15 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+.idea/
+
+# Local environment and generated site files
+.env
+.env.*
+node_modules/
+dist/
+.cache/
