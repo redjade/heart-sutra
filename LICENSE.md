@@ -1,6 +1,6 @@
 # Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
-이 저장소에서 새로 작성한 한국어 번역, 번역 주, 해설 및 연구 기록은 별도 표시가 없는 한 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International(CC BY-NC-SA 4.0) 라이선스로 제공한다.
+이 저장소에서 새로 작성한 한국어 번역, 번역 주, 해설, 연구 기록 및 검증 도구는 별도 표시가 없는 한 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International(CC BY-NC-SA 4.0) 라이선스로 제공한다.
 
 다음 조건을 지켜 이용할 수 있다.
 
