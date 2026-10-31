@@ -8,6 +8,7 @@
 
 - [반야바라밀다심경 한글 번역·번역 주·한문과 현토 독음](translation/01-heart-sutra.md)
 - [구절별 번역 근거와 판본 기록](SOURCES.md)
+- [남은 작업과 이슈](TODO.md)
 - [번역 및 표기 원칙](translation/STYLE.md)
 - 함께 작업한 [금강경 번역 프로젝트](https://github.com/redjade/diamond-sutra)
 
