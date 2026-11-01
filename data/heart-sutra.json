@@ -1,0 +1,919 @@
+{
+  "schema_version": 1,
+  "work_id": "heart-sutra",
+  "title": "반야바라밀다심경(般若波羅蜜多心經)",
+  "short_title": "반야심경",
+  "status": "번역·교정 중인 초안",
+  "base_witness": "현장 역 T08 No.251 · CBETA 교감 주본문",
+  "comparison_witness": "GRETIL 산스크리트 소본 · 대응 어구와 판본 차이 대조",
+  "import": {
+    "commit": "511e0914c9bf07027b59db12592db015cbc8bb92",
+    "markdown_sha256_lf": "d87ee32dad4b8fa222945785801316edffa10b871635e5e0f5cafc2e9b8b475c",
+    "terms_source": "SOURCES.md · 2026-11-01 반입 당시 표의 문구"
+  },
+  "translation_blocks": [
+    {
+      "segments": [
+        {
+          "unit_id": "hs-001",
+          "text": "관자재보살이 깊은 지혜의 완성을 수행할 때, 다섯 무더기가 모두 공함을 밝게 보아 모든 괴로움과 고난을 건넜다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-002",
+          "text": "“사리자여, 물질적 형상은 공과 다르지 않고 공은 물질적 형상과 다르지 않다. 물질적 형상이 곧 공이며 공이 곧 물질적 형상이다. "
+        },
+        {
+          "unit_id": "hs-003",
+          "text": "느낌과 지각과 의지적 형성과 의식도 이와 같다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-004",
+          "text": "사리자여, 모든 현상은 공을 그 특징으로 한다. 생겨나지도 사라지지도 않고, 더럽지도 깨끗하지도 않으며, 늘지도 줄지도 않는다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-005",
+          "text": "그러므로 공 가운데에는 물질적 형상이 없고, 느낌과 지각과 의지적 형성과 의식도 없다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-006",
+          "text": "눈·귀·코·혀·몸·마음도 없고, 형상·소리·냄새·맛·감촉·마음의 대상도 없다. "
+        },
+        {
+          "unit_id": "hs-007",
+          "text": "눈의 영역에서부터 마음의 의식 영역에 이르기까지도 없다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-008",
+          "text": "무명도 없고 무명이 다함도 없으며, 나아가 늙음과 죽음도 없고 늙음과 죽음이 다함도 없다. "
+        },
+        {
+          "unit_id": "hs-009",
+          "text": "괴로움·괴로움의 일어남·괴로움의 소멸·소멸에 이르는 길도 없으며, 지혜도 없고 얻음도 없다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-010",
+          "text": "얻을 것이 없기 때문에, 보살은 지혜의 완성에 의지하여 머물므로 마음에 걸림이 없다. "
+        },
+        {
+          "unit_id": "hs-011",
+          "text": "걸림이 없으므로 두려움이 없다. 뒤바뀐 생각과 꿈같은 망상을 멀리 벗어나 마침내 열반에 이른다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-012",
+          "text": "과거·현재·미래의 모든 부처도 지혜의 완성에 의지하여 가장 높고 바른 깨달음을 이룬다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-013",
+          "text": "그러므로 알아야 한다. 지혜의 완성은 위대한 진언이며, 위대한 지혜의 진언이며, 그보다 높은 것이 없는 진언이며, 견줄 것이 없는 진언이다. "
+        },
+        {
+          "unit_id": "hs-014",
+          "text": "모든 괴로움을 없애며 참되어 헛되지 않다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-014",
+          "text": "그러므로 지혜의 완성의 진언을 말한다. "
+        },
+        {
+          "unit_id": "hs-015",
+          "text": "곧 진언은 이러하다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "unit_id": "hs-016",
+          "text": "가테 가테 파라가테 파라상가테 보디 스바하.”"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "hs-001",
+      "label": "다섯 무더기",
+      "chinese": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+      "reading": "관자재보살이 행심반야바라밀다시에，조견오온개공하여，도일체고액하니라。",
+      "note_ids": [
+        "note-01",
+        "note-02",
+        "note-03",
+        "note-07",
+        "note-08"
+      ]
+    },
+    {
+      "id": "hs-002",
+      "label": "형상과 공",
+      "chinese": "舍利子！色不異空，空不異色，色即是空，空即是色；",
+      "reading": "사리자야！색불이공이며，공불이색이요，색즉시공이며，공즉시색이니；",
+      "note_ids": [
+        "note-04"
+      ]
+    },
+    {
+      "id": "hs-003",
+      "label": "나머지 네 무더기",
+      "chinese": "受、想、行、識，亦復如是。",
+      "reading": "수、상、행、식도 역부여시니라。",
+      "note_ids": [
+        "note-03",
+        "note-04"
+      ]
+    },
+    {
+      "id": "hs-004",
+      "label": "공의 특징",
+      "chinese": "舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。",
+      "reading": "사리자야！시제법공상은 불생불멸이며，불구부정이며，부증불감이니라。",
+      "note_ids": [
+        "note-13",
+        "note-16"
+      ]
+    },
+    {
+      "id": "hs-005",
+      "label": "오온의 부정",
+      "chinese": "是故，空中無色，無受、想、行、識；",
+      "reading": "시고로 공중무색이며，무수、상、행、식이요；",
+      "note_ids": [
+        "note-04",
+        "note-16"
+      ]
+    },
+    {
+      "id": "hs-006",
+      "label": "감각 기관과 대상",
+      "chinese": "無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；",
+      "reading": "무안、이、비、설、신、의며；무색、성、향、미、촉、법이요；",
+      "note_ids": [
+        "note-03",
+        "note-10"
+      ]
+    },
+    {
+      "id": "hs-007",
+      "label": "감각 영역",
+      "chinese": "無眼界，乃至無意識界；",
+      "reading": "무안계며，내지무의식계요；",
+      "note_ids": [
+        "note-10"
+      ]
+    },
+    {
+      "id": "hs-008",
+      "label": "무명에서 늙음과 죽음까지",
+      "chinese": "無無明亦無無明盡，乃至無老死亦無老死盡；",
+      "reading": "무무명하며 역무무명진이며，내지무노사하며 역무노사진이요；",
+      "note_ids": [
+        "note-10",
+        "note-16"
+      ]
+    },
+    {
+      "id": "hs-009",
+      "label": "괴로움과 길, 앎과 얻음",
+      "chinese": "無苦、集、滅、道；無智，亦無得。",
+      "reading": "무고、집、멸、도며；무지요，역무득이니라。",
+      "note_ids": [
+        "note-05",
+        "note-07",
+        "note-10",
+        "note-13"
+      ]
+    },
+    {
+      "id": "hs-010",
+      "label": "마음에 걸림이 없음",
+      "chinese": "以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；",
+      "reading": "이무소득고로，보리살타가 의반야바라밀다고로，심무가애며；",
+      "note_ids": [
+        "note-05",
+        "note-11"
+      ]
+    },
+    {
+      "id": "hs-011",
+      "label": "두려움과 열반",
+      "chinese": "無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。",
+      "reading": "무가애고로，무유공포하고，원리전도몽상하여，구경열반하느니라。",
+      "note_ids": [
+        "note-05",
+        "note-11"
+      ]
+    },
+    {
+      "id": "hs-012",
+      "label": "세 시대의 부처",
+      "chinese": "三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。",
+      "reading": "삼세제불이 의반야바라밀다고로，득아뇩다라삼먁삼보리하느니라。",
+      "note_ids": [
+        "note-15"
+      ]
+    },
+    {
+      "id": "hs-013",
+      "label": "지혜의 완성과 진언",
+      "chinese": "故知般若波羅蜜多是大神咒、是大明咒、是無上咒、是無等等咒，",
+      "reading": "고지반야바라밀다는 시대신주며、시대명주며、시무상주며、시무등등주라，",
+      "note_ids": [
+        "note-01",
+        "note-12",
+        "note-13"
+      ]
+    },
+    {
+      "id": "hs-014",
+      "label": "진언의 선언",
+      "chinese": "能除一切苦，真實不虛，故說般若波羅蜜多咒。",
+      "reading": "능제일체고하며，진실불허할새，고설반야바라밀다주니라。",
+      "note_ids": [
+        "note-14"
+      ]
+    },
+    {
+      "id": "hs-015",
+      "label": "진언을 말함",
+      "chinese": "即說咒曰：",
+      "reading": "즉설주왈：",
+      "note_ids": [
+        "note-14"
+      ]
+    },
+    {
+      "id": "hs-016",
+      "label": "진언",
+      "chinese": "揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　莎婆訶",
+      "reading": "아제　아제　바라아제　바라승아제　모지　사바하",
+      "note_ids": [
+        "note-06",
+        "note-09"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-01",
+      "number": 1,
+      "text": "이 번역의 한문 기준은 현장 역 《반야바라밀다심경》, 대정신수대장경 T08 No.251이다. 한글 번역에서는 현장본의 독송 흐름을 유지하면서 산스크리트 소본의 문법과 어휘를 함께 대조했다. `般若波羅蜜多`는 산스크리트 `prajñāpāramitā`의 음역이다. `prajñā`는 단순한 지식보다 꿰뚫어 보는 지혜를, `pāramitā`는 완성·완전성을 가리키므로 본문에서는 `지혜의 완성`으로 옮겼다. `心經`의 `心(hṛdaya)`은 감정적 마음이라기보다 심장·핵심·정수라는 뜻이다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-02",
+      "number": 2,
+      "text": "대조한 GRETIL 산스크리트 소본은 오온을 `svabhāva-śūnyān`, 곧 `자기 본성이 공한` 것으로 본다고 명시한다. 이는 다섯 무더기에 자기 본성이라는 무엇이 따로 있고 그것이 공하다는 말로 읽지 않는다. 이 번역에서는 다른 조건에 기대지 않는 자기 본성으로 성립하지 않는다는 뜻으로 이해한다. 현장본의 `五蘊皆空`에는 `自性`이 명시되지 않는다. 2026-11-01에는 본문을 `다섯 무더기가 모두 공함`으로 고쳐 T251의 직접적인 표현을 따르고, S의 자성 표현은 이 주에서 구별했다. 2026-10-30에 이미 덜었던 `고정된`을 되살리거나 `조건 따라 생겨나므로` 같은 해설을 본문에 추가하지 않았다. `공`은 아무것도 없다는 뜻으로 단정하지 않으며, 뒤의 `空`과 같은 말로 옮긴다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-03",
+      "number": 3,
+      "text": "`五蘊`은 경험을 이루는 다섯 무더기다. `色(rūpa)`은 몸과 물질적 형상, `受(vedanā)`는 쾌·불쾌·중성으로 느끼는 감수, `想(saṃjñā)`은 대상을 알아보고 특징을 취해 표상하는 지각, `行(saṃskāra)`은 의도·충동·습관·주의처럼 마음과 행동을 빚어 가는 여러 작용, `識(vijñāna)`은 감각 기관과 대상에 따라 일어나는 분별 의식을 가리킨다. 특히 `saṃskāra`에는 의도하여 업을 짓는 작용과, 여러 조건이 모여 경험과 성향을 형성하는 작용이라는 뜻이 함께 있다. 어느 한쪽만으로 정확히 대응하는 자연스러운 한글 낱말을 찾기 어려워 본문에서는 `의지적 형성`이라고 옮겼다. 이는 단순한 결심이나 의지만을 뜻하지 않는다. 이 다섯 무더기는 한 사람을 이루는 조건들의 흐름이지, 그 배후에 영원한 자아가 있다는 뜻이 아니다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-04",
+      "number": 4,
+      "text": "`色即是空，空即是色`은 형상이 사라져야 별도의 공이 나타난다는 말이 아니다. 형상은 조건에 의지하므로 바로 공하고, 공은 형상을 떠난 또 하나의 실체가 아니라 형상이 성립하는 방식이다. 이어지는 감각 기관·대상·의식, 연기와 사성제의 부정도 그것들을 없애는 선언이 아니라 고정된 실체로 붙잡을 수 없다는 뜻이다. 대조한 GRETIL본은 이 대목을 `rūpaṃ śūnyatā, śūnyat'aiva rūpaṃ, rūpān na pṛthak śūnyatā, śūnyatāyā na pṛthag rūpaṃ, yad rūpaṃ sā śūnyatā, yā śūnyatā tad rūpaṃ`의 여섯 구로 말하며, 순서와 구성이 T251의 네 구와 다르다. 본문은 T251의 네 구를 따른다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-05",
+      "number": 5,
+      "text": "`無智`의 `智`는 산스크리트 `jñāna`, 곧 앎·인식·성취된 지혜에 대응한다. 앞의 `般若(prajñā)`와는 다른 원어지만, 자연스러운 한국어를 위해 둘 다 문맥에 따라 `지혜`로 옮겼다. `無所得(aprāptitva)`은 깨달음이나 수행의 결과가 전혀 없다는 허무주의가 아니다. 깨달음을 수행하는 내가 새로 소유하거나 붙잡을 고정된 물건이나 상태로 삼을 수 없다는 뜻으로 읽었다. 바로 그 얻을 바 없음 때문에 마음의 걸림과 두려움에서 벗어난다는 것이 채택한 문장 연결이다. 산스크리트의 `viharati(머문다)`를 반영한 `머문다` 역시 T251에 명시되지 않은 보완이다. 2026-10-30 교정에서 T251의 `依般若波羅蜜多故，心無罣礙`가 가진 `故`의 인과 연결을 살려 `의지하여 머물므로 마음에 걸림이 없다`로 고쳤다. 종전에는 `머문다`에서 문장을 끊어 의지와 걸림 없음의 인과가 드러나지 않았다. GRETIL본도 `āśritya viharaty acitt'āvaraṇaḥ`로 머묾과 걸림 없음을 한 문장에 둔다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-06",
+      "number": 6,
+      "text": "마지막 진언은 의미를 풀어 번역하기보다 소리를 전승하는 구절이다. `gate gate pāragate pārasaṃgate bodhi svāhā`를 전통적으로 `가라, 가라, 저편으로 가라, 온전히 저편으로 가라, 깨달음이여, 스바하`라고 풀이하지만, `gate`의 문법과 전체 통사에는 여러 해석이 있어 이를 확정적인 직역으로 보기는 어렵다. `svāhā`도 진언을 맺는 의례적 감탄이므로 하나의 뜻으로 고정하기 어렵다. 한글 번역에는 산스크리트 소리에 가까운 음역을 두었다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-07",
+      "number": 7,
+      "text": "대조한 GRETIL 소본에는 T251에 명시되지 않은 `성스러운(ārya)`이라는 관자재보살의 수식어가 있다. 반대로 T251의 `度一切苦厄`은 이 GRETIL본에는 없다. 이 차이만으로 어느 쪽이 역사적으로 생략하거나 첨가했다고 확정하지 않는다. 또 GRETIL본은 `無智亦無得`에 대응하여 `앎도 없고, 얻음도 없고, 얻지 못함도 없다`(`na jñānaṃ na prāptir nāprāptiḥ`)고 하지만 T251에는 마지막 `얻지 못함도 없다`가 없다. 더 큰 반야경의 평행구인 `성취도 없고 현관·깨달아 앎도 없다`(`na prāptir nābhisamayaḥ`)와 비교하는 연구도 있다. 이는 다른 문헌의 평행구를 통한 재해석이므로 T251 본문에 새 문구를 보충하는 근거로 삼지 않았다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-08",
+      "number": 8,
+      "text": "장본 반야심경에는 설법의 장소와 청중, 부처의 선정, 사리자의 질문, 부처의 인가와 대중의 환희가 들어 있지만, 현장 역 T251과 산스크리트 소본에는 이 서사적 틀이 없다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-09",
+      "number": 9,
+      "text": "CBETA의 T251 현행 교감 주본문은 `揭帝 揭帝 般羅揭帝 般羅僧揭帝 菩提 莎婆訶`이다. 대정장 인쇄 원문은 끝부분을 `僧莎訶`로 적고, 송·원·명본은 `帝`를 `諦`, `般`을 `波`, 끝부분을 `薩婆訶`로 적는다. 오늘날 널리 독송되는 한문 표기는 주로 송·원·명계 이문을 따른다. 아래 굵은 한문은 오류를 바로잡아 채택한 CBETA 교감 주본문을 보존했다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-10",
+      "number": 10,
+      "text": "`眼界乃至意識界`는 눈의 영역 하나와 마음의식의 영역 하나만을 말하는 것이 아니라, 여섯 감각 기관·여섯 대상·여섯 의식으로 이루어진 열여덟 영역 전체를 처음과 끝으로 압축한 표현이다. 마찬가지로 `無無明…乃至無老死`는 무명에서 늙음과 죽음까지의 십이연기 전체를, `無苦集滅道`는 괴로움·그 일어남·소멸·소멸에 이르는 길이라는 네 가지 진리를 가리킨다. 2026-10-30 교정에서 본문의 `集(samudaya)`도 `원인`에서 `일어남`으로 고쳐 이 주석과 맞췄다. `samudaya`는 단일 원인보다 일어남·발생의 범위를 가진다. 이 가르침들을 폐기한다는 뜻이 아니라 공의 관점에서 고정된 실체로 붙잡지 않는다는 뜻이다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-11",
+      "number": 11,
+      "text": "`心無罣礙`의 `罣礙`에는 걸림·붙들림·방해라는 뜻이 있어 `마음에 걸림이 없다`로 옮겼다. 산스크리트 `āvaraṇa`의 가림·장애라는 뜻도 함께 고려했다. `夢想`은 2026-10-30 교정에서 `헛된 표상`을 `꿈같은 망상`으로 고쳐 `夢`의 비유를 살렸다. GRETIL본에는 `夢想`의 별도 대응어 없이 `viparyās'ātikrānto`(전도를 넘어선)만 있다. `究竟涅槃`을 본문에서는 전통적인 한역 독법에 따라 `마침내 열반에 이른다`고 옮겼지만, 대조한 산스크리트의 `niṣṭhānirvāṇaḥ`에는 별도의 `이른다`라는 동사가 없고 보살을 꾸미는 복합어로 읽을 수 있다. 이 분석은 특정 독법에 관한 연구이며 모든 산스크리트 판본에 같은 형태가 있는 것은 아니다. 구절별 근거 기록에서 대안과 판본을 별도로 다룬다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-12",
+      "number": 12,
+      "text": "`無等等咒`를 `견줄 것이 없는 진언`으로 옮긴 것은 T251을 따른 것이다. 대조한 GRETIL본에는 `samasamamantra`가 있고, 다른 비평본에는 부정 접두사가 붙은 `asamasamamantra`가 있어 판본과 복합어 분석에 차이가 있다. 이 차이 때문에 GRETIL의 한 형태를 한문의 유일한 직역 근거로 삼지 않았다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-13",
+      "number": 13,
+      "text": "`大明咒`의 `明`에 대응하는 `vidyā`는 밝은 앎·명지라는 뜻과 의례적 주문의 용법을 함께 가진다. 본문의 `위대한 지혜의 진언`은 이 뜻을 쉽게 풀었지만, `prajñā`와 `jñāna`에 이어 `vidyā`까지 같은 한국어 `지혜`로 옮겼다는 점을 근거 기록에 명시했다. `諸法空相` 뒤의 불생불멸 등은 산스크리트에서 현상들을 꾸미는 말이 이어지는 구조이므로, 한국어에 `하므로`라는 인과 접속을 덧붙이지 않았다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-14",
+      "number": 14,
+      "text": "`故說般若波羅蜜多咒`에 대응하는 GRETIL본은 `prajñāpāramitāyām ukto mantraḥ`, 곧 `지혜의 완성에서 설해진 진언`이라고 처소격으로 말한다. 본문은 T251을 따라 `지혜의 완성의 진언`으로 옮겼다.",
+      "gap_after": "\n"
+    },
+    {
+      "id": "note-15",
+      "number": 15,
+      "text": "`阿耨多羅三藐三菩提`는 산스크리트 `anuttarā samyaksaṃbodhi`의 음역이다. `anuttara`는 그보다 위가 없음, `samyak`은 바르게·온전히, `saṃbodhi`는 `saṃ-`(완전히)이 붙은 깨달음이다. 현장은 다른 역경에서 이 말을 주로 `無上正等菩提`·`無上正等覺`으로, 구마라집은 `samyaksaṃbuddha`를 `正遍知`로 옮겨, 한역 전통은 `正等`·`正遍`에 평등·보편의 뜻을 읽어 왔다. 이는 산스크리트의 직역이 아니고, 오늘날 `평등`은 사회적 차별이 없다는 뜻으로 먼저 읽히므로 번역어에는 넣지 않고 `가장 높고 바른 깨달음`으로 두 경의 번역을 통일했다(2026-10-30). `saṃ-`의 `완전한`도 본문에서 덜고 이 주석에 둔다. 함께 작업한 금강경 번역은 제23분에서 경 스스로 이 이름을 `是法平等，無有高下`로 풀이한다는 점을 주석으로 밝힌다.",
+      "gap_after": "\n\n"
+    },
+    {
+      "id": "note-16",
+      "number": 16,
+      "text": "`不生不滅`은 본문의 `생겨나지도 사라지지도 않고`라는 직접 부정을 유지한다. 이것을 영원히 머무는 실체가 있다는 긍정문으로 바꾸어 읽지는 않는다. 이 경은 형상과 공이 서로 다르지 않다고 말하고, 이어 다섯 무더기와 감각 영역, 앎과 얻음까지 부정한다. 따라서 공이나 의식을 그 배후의 변하지 않는 바탕으로 세우지 않는다는 것이 이 번역의 해석이다. 그 해석을 표현하려고 `실체로서는` 같은 조건을 본문에 덧붙이지 않는다.",
+      "gap_after": "\n"
+    }
+  ],
+  "terms": [
+    {
+      "id": "term-01",
+      "chinese": "般若",
+      "sanskrit_comparison": "`prajñā`",
+      "translation": "지혜",
+      "decision": "일반 지식보다 꿰뚫어 아는 통찰의 지혜다. `智(jñāna)`와 원어가 다르다.",
+      "conventional_reading": "반야",
+      "unit_ids": [
+        "hs-001",
+        "hs-010",
+        "hs-012",
+        "hs-013",
+        "hs-014"
+      ]
+    },
+    {
+      "id": "term-02",
+      "chinese": "波羅蜜多",
+      "sanskrit_comparison": "`pāramitā`",
+      "translation": "완성",
+      "decision": "완성·완전성이라는 뜻을 우선했다. `피안에 이름`은 중요한 전통적 해설이지만 유일한 직역으로 단정하지 않는다.",
+      "conventional_reading": "바라밀다",
+      "unit_ids": [
+        "hs-001",
+        "hs-010",
+        "hs-012",
+        "hs-013",
+        "hs-014"
+      ]
+    },
+    {
+      "id": "term-03",
+      "chinese": "般若波羅蜜多",
+      "sanskrit_comparison": "`prajñāpāramitā`",
+      "translation": "지혜의 완성",
+      "decision": "제목에서는 관용 음역 `반야바라밀다`, 본문에서는 뜻이 드러나는 `지혜의 완성`을 사용한다.",
+      "conventional_reading": "반야바라밀다",
+      "unit_ids": [
+        "hs-001",
+        "hs-010",
+        "hs-012",
+        "hs-013",
+        "hs-014"
+      ]
+    },
+    {
+      "id": "term-04",
+      "chinese": "心經",
+      "sanskrit_comparison": "`hṛdaya-sūtra`",
+      "translation": "심경",
+      "decision": "`hṛdaya`는 심장·중심·핵심·정수다. 단순히 마음을 다루는 경이라는 뜻이 아니다.",
+      "conventional_reading": "심경",
+      "unit_ids": []
+    },
+    {
+      "id": "term-05",
+      "chinese": "觀自在",
+      "sanskrit_comparison": "`Ārya Avalokiteśvara`",
+      "translation": "관자재",
+      "decision": "고유명사이므로 풀어 번역하지 않는다. 산스크리트의 `ārya(성스러운)`는 T251에 명시되지 않아 본문에 보충하지 않는다.",
+      "conventional_reading": "관자재",
+      "unit_ids": [
+        "hs-001"
+      ]
+    },
+    {
+      "id": "term-06",
+      "chinese": "菩薩",
+      "sanskrit_comparison": "`bodhisattva`",
+      "translation": "보살",
+      "decision": "깨달음을 지향하고 구현하는 존재라는 뜻의 관용 음역이다. 산스크리트 문장에서는 관자재와 동격이며 뒤의 수행과 관찰의 주체다.",
+      "conventional_reading": "보살",
+      "unit_ids": [
+        "hs-001",
+        "hs-010"
+      ]
+    },
+    {
+      "id": "term-07",
+      "chinese": "行深般若波羅蜜多時",
+      "sanskrit_comparison": "GRETIL 표기 `gambhīraṃ prajñāpāramitā-cāryāṃ caramāṇo`",
+      "translation": "깊은 지혜의 완성을 수행할 때",
+      "decision": "`gambhīra`는 깊고 심오함, `caryā`는 수행·실천, `caramāṇa`는 행하고 있는 상태다. 표준 기본형과 전자본의 실제 철자·굴절을 구별하고, 인용문을 말없이 정규화하지 않는다. `깊은`을 수행 강도로만 읽지 않는다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-001"
+      ]
+    },
+    {
+      "id": "term-08",
+      "chinese": "照見",
+      "sanskrit_comparison": "`vyavalokayati sma … paśyati sma`",
+      "translation": "밝게 보아",
+      "decision": "산스크리트는 면밀히 관찰함과 봄을 두 동사로 나타낸다. 한문의 `照見`도 평범한 시각보다 비추어 분명히 아는 통찰을 나타낸다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-001"
+      ]
+    },
+    {
+      "id": "term-09",
+      "chinese": "五蘊",
+      "sanskrit_comparison": "`pañca-skandhāḥ`",
+      "translation": "다섯 무더기",
+      "decision": "`skandha`는 무더기·집합이다. 다섯 개의 영속적 실체가 아니라 경험과 인격을 이룬다고 집착하는 조건적 집합이다.",
+      "conventional_reading": "오온",
+      "unit_ids": [
+        "hs-001"
+      ]
+    },
+    {
+      "id": "term-10",
+      "chinese": "皆空",
+      "sanskrit_comparison": "`svabhāva-śūnyān`",
+      "translation": "모두 공함",
+      "decision": "2026-11-01에 본문은 T251을 따라 `모두 공함`으로 옮겼다. S는 `자기 본성이 공한`이라는 말을 명시하므로 그 문구와 뜻을 번역 주 2에 남겼다. 자기 본성이라는 별도의 실체를 먼저 인정한 뒤 그것이 공하다고 말하는 식으로 읽지 않는다. 두 본문의 차이만으로 역사적 선후 관계를 확정하지 않는다.",
+      "conventional_reading": "개공",
+      "unit_ids": [
+        "hs-001"
+      ]
+    },
+    {
+      "id": "term-11",
+      "chinese": "度一切苦厄",
+      "sanskrit_comparison": "직접 대응 없음",
+      "translation": "모든 괴로움과 고난을 건넜다",
+      "decision": "대조한 두 본문 중 T251에 있는 구절로 보존했다. GRETIL 소본에는 없다. `度`의 건넘 비유를 살렸으며, 외부 사건만 떠올리기 쉬운 `재난`보다 넓게 곤경을 포함하는 `고난`으로 다듬었다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-001"
+      ]
+    },
+    {
+      "id": "term-12",
+      "chinese": "舍利子",
+      "sanskrit_comparison": "`iha Śāriputra`",
+      "translation": "사리자여",
+      "decision": "`Śāriputra`는 인명이다. 산스크리트의 `iha(여기서·이 점에서)`는 T251에 명시되지 않아 보충하지 않는다.",
+      "conventional_reading": "사리자",
+      "unit_ids": [
+        "hs-002",
+        "hs-004"
+      ]
+    },
+    {
+      "id": "term-13",
+      "chinese": "色",
+      "sanskrit_comparison": "`rūpa`",
+      "translation": "물질적 형상",
+      "decision": "색깔만이 아니라 몸과 물질성, 형상을 포함한다. 감각 대상의 `色`에서는 보이는 형상이라는 범위가 강하다.",
+      "conventional_reading": "색",
+      "unit_ids": [
+        "hs-002",
+        "hs-005",
+        "hs-006"
+      ]
+    },
+    {
+      "id": "term-14",
+      "chinese": "受",
+      "sanskrit_comparison": "`vedanā`",
+      "translation": "느낌",
+      "decision": "감정 일반보다 감각 접촉에 수반되는 쾌·불쾌·중성의 감수 작용에 가깝다. 자연스러운 본문을 위해 `느낌`을 유지한다.",
+      "conventional_reading": "수",
+      "unit_ids": [
+        "hs-003",
+        "hs-005"
+      ]
+    },
+    {
+      "id": "term-15",
+      "chinese": "想",
+      "sanskrit_comparison": "`saṃjñā`",
+      "translation": "지각",
+      "decision": "대상을 알아보고 특징을 취하여 이름 붙이고 표상하는 작용이다. 단순한 상상만을 뜻하지 않는다.",
+      "conventional_reading": "상",
+      "unit_ids": [
+        "hs-003",
+        "hs-005"
+      ]
+    },
+    {
+      "id": "term-16",
+      "chinese": "行",
+      "sanskrit_comparison": "`saṃskāra`",
+      "translation": "의지적 형성",
+      "decision": "의도·충동·습관·주의 등 경험과 성향을 조건 짓는 작용을 포괄한다. 상세한 선택 이유는 위의 별도 기록을 따른다.",
+      "conventional_reading": "행",
+      "unit_ids": [
+        "hs-003",
+        "hs-005"
+      ]
+    },
+    {
+      "id": "term-17",
+      "chinese": "識",
+      "sanskrit_comparison": "`vijñāna`",
+      "translation": "의식",
+      "decision": "감각 기관과 대상에 따라 일어나 대상을 나누어 아는 조건 지어진 분별 의식이다. 영속적 자아나 순수의식을 뜻하지 않는다.",
+      "conventional_reading": "식",
+      "unit_ids": [
+        "hs-003",
+        "hs-005"
+      ]
+    },
+    {
+      "id": "term-18",
+      "chinese": "空",
+      "sanskrit_comparison": "`śūnyatā`",
+      "translation": "공",
+      "decision": "독립된 자기 본성의 부재, 비어 있음이다. 허무나 완전한 무존재도 아니고 형상 뒤에 따로 존재하는 실체도 아니다.",
+      "conventional_reading": "공",
+      "unit_ids": [
+        "hs-001",
+        "hs-002",
+        "hs-004",
+        "hs-005"
+      ]
+    },
+    {
+      "id": "term-19",
+      "chinese": "色不異空…空即是色",
+      "sanskrit_comparison": "`rūpaṃ śūnyatā … śūnyatāyā na pṛthag rūpam`",
+      "translation": "형상과 공은 서로 다르지 않다",
+      "decision": "두 실체가 나중에 합쳐진다는 말이 아니라, 조건 지어진 형상의 존재 방식이 곧 공하며 공은 형상을 떠나 따로 있지 않다는 뜻으로 읽었다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-002"
+      ]
+    },
+    {
+      "id": "term-20",
+      "chinese": "諸法",
+      "sanskrit_comparison": "`sarva-dharmāḥ`",
+      "translation": "모든 현상",
+      "decision": "여기서 `法`은 불교의 가르침만이 아니라 모든 경험 요소와 현상을 가리킨다.",
+      "conventional_reading": "제법",
+      "unit_ids": [
+        "hs-004"
+      ]
+    },
+    {
+      "id": "term-21",
+      "chinese": "空相",
+      "sanskrit_comparison": "`śūnyatā-lakṣaṇa`",
+      "translation": "공을 그 특징으로 함",
+      "decision": "`lakṣaṇa`는 특징·표지·성격이다. GRETIL에서는 현상들을 꾸미는 말들이 나란히 이어지므로, 원문에 없는 `하므로`라는 인과 접속을 덜어 냈다.",
+      "conventional_reading": "공상",
+      "unit_ids": [
+        "hs-004"
+      ]
+    },
+    {
+      "id": "term-22",
+      "chinese": "不生不滅",
+      "sanskrit_comparison": "`anutpannā aniruddhā`",
+      "translation": "생겨나지도 사라지지도 않음",
+      "decision": "경험적 변화 자체를 부정하는 말이 아니라 독립된 자성을 가진 발생과 소멸을 부정한다.",
+      "conventional_reading": "불생불멸",
+      "unit_ids": [
+        "hs-004"
+      ]
+    },
+    {
+      "id": "term-23",
+      "chinese": "不垢不淨",
+      "sanskrit_comparison": "`amalā avimalā`",
+      "translation": "더럽지도 깨끗하지도 않음",
+      "decision": "`amala`는 때 묻지 않음, `avimala`는 청정하지 않음이다. 각각 `不垢·不淨`에 대응한다. 부정 접두사가 겹쳐 보이는 것을 이유로 이 전자본에 문법적 모순이 있다고 단정하지 않는다.",
+      "conventional_reading": "불구부정",
+      "unit_ids": [
+        "hs-004"
+      ]
+    },
+    {
+      "id": "term-24",
+      "chinese": "不增不減",
+      "sanskrit_comparison": "`anūnā aparipūrṇāḥ`",
+      "translation": "늘지도 줄지도 않음",
+      "decision": "T251을 직접 번역했다. 이 산스크리트본은 `모자라지 않고 완전히 채워진 것도 아닌`이라는 결핍·충만의 축에 더 가깝다. 둘을 본문에서 합성하지 않는다.",
+      "conventional_reading": "부증불감",
+      "unit_ids": [
+        "hs-004"
+      ]
+    },
+    {
+      "id": "term-25",
+      "chinese": "眼耳鼻舌身意",
+      "sanskrit_comparison": "`cakṣuḥ-śrotra-ghrāṇa-jihvā-kāya-manāṃsi`",
+      "translation": "눈·귀·코·혀·몸·마음",
+      "decision": "여섯 감각 능력이다. `manas`는 여기서 정신적 대상을 받아들이는 마음의 감각 능력이다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-006"
+      ]
+    },
+    {
+      "id": "term-26",
+      "chinese": "色聲香味觸法",
+      "sanskrit_comparison": "`rūpa-śabda-gandha-rasa-spraṣṭavya-dharmāḥ`",
+      "translation": "형상·소리·냄새·맛·감촉·마음의 대상",
+      "decision": "`觸`은 엄밀히 만져지는 대상, 이 문맥의 `法`은 정신적 대상이다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-006"
+      ]
+    },
+    {
+      "id": "term-27",
+      "chinese": "眼界乃至意識界",
+      "sanskrit_comparison": "`cakṣur-dhātur yāvan mano-vijñāna-dhātuḥ`",
+      "translation": "눈의 영역부터 마음의 의식 영역까지",
+      "decision": "`界/dhātu`는 요소·영역·기반이다. 처음과 끝만 들어 여섯 기관·여섯 대상·여섯 의식의 열여덟 계 전체를 압축한다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-007"
+      ]
+    },
+    {
+      "id": "term-28",
+      "chinese": "無明…無明盡",
+      "sanskrit_comparison": "`avidyā … avidyā-kṣaya`",
+      "translation": "무명과 무명이 다함",
+      "decision": "십이연기의 첫 항목과 그 소진이다. `盡/kṣaya`는 다함·소진이다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-008"
+      ]
+    },
+    {
+      "id": "term-29",
+      "chinese": "乃至老死…老死盡",
+      "sanskrit_comparison": "`yāvan jarā-maraṇa … jarā-maraṇa-kṣaya`",
+      "translation": "늙음과 죽음 및 그 다함",
+      "decision": "`乃至/yāvat`은 무명에서 노사까지 십이연기의 중간 항목 전체를 생략해 가리킨다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-008"
+      ]
+    },
+    {
+      "id": "term-30",
+      "chinese": "苦集滅道",
+      "sanskrit_comparison": "`duḥkha-samudaya-nirodha-mārga`",
+      "translation": "괴로움·일어남·소멸·길",
+      "decision": "네 가지 성스러운 진리다. 2026-10-30에 본문의 `원인`을 번역 주와 같이 `일어남`으로 고쳤다. `集/samudaya`는 단일 원인만이 아니라 일어남·발생·집기의 범위가 있다.",
+      "conventional_reading": "고집멸도",
+      "unit_ids": [
+        "hs-009"
+      ]
+    },
+    {
+      "id": "term-31",
+      "chinese": "智",
+      "sanskrit_comparison": "`jñāna`",
+      "translation": "지혜",
+      "decision": "앎·인식·지식·성취된 지혜의 범위다. `般若/prajñā`와 다른 원어라는 점을 번역 주에 밝혔다.",
+      "conventional_reading": "지",
+      "unit_ids": [
+        "hs-009"
+      ]
+    },
+    {
+      "id": "term-32",
+      "chinese": "得",
+      "sanskrit_comparison": "`prāpti`",
+      "translation": "얻음",
+      "decision": "획득·도달·성취다. 소유할 수 있는 고정된 성취로 붙잡는 일을 부정하는 문맥으로 읽었다.",
+      "conventional_reading": "득",
+      "unit_ids": [
+        "hs-009"
+      ]
+    },
+    {
+      "id": "term-33",
+      "chinese": "以無所得故",
+      "sanskrit_comparison": "`aprāptitvād`",
+      "translation": "얻을 것이 없기 때문에",
+      "decision": "산스크리트는 `얻음·도달이 없음으로 말미암아`라는 추상명사의 탈격이다. `얻지 못했기 때문에`라는 결핍의 뜻이 아니며, 붙잡아 소유할 성취가 없다는 의미로 읽었다.",
+      "conventional_reading": "이무소득고",
+      "unit_ids": [
+        "hs-010"
+      ]
+    },
+    {
+      "id": "term-34",
+      "chinese": "依般若波羅蜜多",
+      "sanskrit_comparison": "`prajñāpāramitām āśritya viharati`",
+      "translation": "지혜의 완성에 의지하여 머물므로",
+      "decision": "`āśritya`는 의지하여, `viharati`는 머물다·살아가다·실천하며 지내다라는 뜻이다. T251에는 `viharati`가 명시되지 않지만 산스크리트 동사를 반영해 `머문다`를 보충했다. T251의 `依…故`에 따라 뒤의 `心無罣礙`의 이유로 잇는다(2026-10-30).",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-010",
+        "hs-012"
+      ]
+    },
+    {
+      "id": "term-35",
+      "chinese": "心無罣礙",
+      "sanskrit_comparison": "`acittāvaraṇaḥ`",
+      "translation": "마음에 걸림이 없음",
+      "decision": "`罣礙`는 걸림·붙들림·방해를 포함한다. 산스크리트의 가림·장애 이미지도 고려하되, 한문에서 드러나는 걸림을 살려 `가림`을 `걸림`으로 다듬었다. Huìfēng의 해석은 배경 자료로 참고하고 특정 해석을 원어의 유일한 뜻으로 고정하지 않는다.",
+      "conventional_reading": "심무가애",
+      "unit_ids": [
+        "hs-010"
+      ]
+    },
+    {
+      "id": "term-36",
+      "chinese": "無有恐怖",
+      "sanskrit_comparison": "`atrastaḥ`",
+      "translation": "두려움이 없음",
+      "decision": "`atrasta`는 겁먹거나 떨지 않는다는 뜻으로 보살을 수식한다.",
+      "conventional_reading": "무유공포",
+      "unit_ids": [
+        "hs-011"
+      ]
+    },
+    {
+      "id": "term-37",
+      "chinese": "遠離顛倒夢想",
+      "sanskrit_comparison": "`viparyāsātikrāntaḥ`",
+      "translation": "뒤바뀐 생각과 꿈같은 망상을 멀리 벗어남",
+      "decision": "산스크리트에는 `夢想`의 별도 대응어 없이 `전도된 인식을 넘어선`이라는 한 복합어가 있다. 현재 번역은 T251의 두 낱말을 보존한다. 2026-10-30에 `夢`이 빠져 있던 `헛된 표상`을 `꿈같은 망상`으로 고쳤다.",
+      "conventional_reading": "원리전도몽상",
+      "unit_ids": [
+        "hs-011"
+      ]
+    },
+    {
+      "id": "term-38",
+      "chinese": "究竟涅槃",
+      "sanskrit_comparison": "`niṣṭhā-nirvāṇaḥ`",
+      "translation": "마침내 열반에 이른다",
+      "decision": "전통적인 한역 독법을 따른다. 산스크리트에는 별도의 `이른다` 동사가 없고, 남성 주격 복합어가 보살을 꾸미는 것으로 보아 `열반을 궁극으로 하는` 또는 `그 열반이 완결된`으로 분석할 수도 있다.",
+      "conventional_reading": "구경열반",
+      "unit_ids": [
+        "hs-011"
+      ]
+    },
+    {
+      "id": "term-39",
+      "chinese": "三世",
+      "sanskrit_comparison": "`tryadhva-vyavasthitāḥ`",
+      "translation": "과거·현재·미래",
+      "decision": "세 시간대에 자리한 모든 부처라는 뜻을 자연스럽게 풀었다. GRETIL 전자본 표기는 `Tradhva`다.",
+      "conventional_reading": "삼세",
+      "unit_ids": [
+        "hs-012"
+      ]
+    },
+    {
+      "id": "term-40",
+      "chinese": "阿耨多羅三藐三菩提",
+      "sanskrit_comparison": "`anuttarā samyak-saṃbodhi`",
+      "translation": "가장 높고 바른 깨달음",
+      "decision": "`anuttara`는 그보다 위가 없음, `samyak`은 바르게, `saṃbodhi`는 완전한 깨달음이다. 2026-10-30에 금강경 번역과 통일하며 `완전한`을 덜었다. 현장의 `正等`이 담는 평등·보편의 뜻은 번역 주 15에 밝혔다. 앞의 무소득과 모순되는 물건의 취득으로 읽지 않는다.",
+      "conventional_reading": "아뇩다라삼먁삼보리",
+      "unit_ids": [
+        "hs-012"
+      ]
+    },
+    {
+      "id": "term-41",
+      "chinese": "大神咒",
+      "sanskrit_comparison": "`mahāmantra`",
+      "translation": "위대한 진언",
+      "decision": "`mantra`는 성스러운 음성 공식·주문·진언이다. 한국 불교의 관용어 `진언`을 채택했다.",
+      "conventional_reading": "대신주",
+      "unit_ids": [
+        "hs-013"
+      ]
+    },
+    {
+      "id": "term-42",
+      "chinese": "大明咒",
+      "sanskrit_comparison": "`mahāvidyāmantra`",
+      "translation": "위대한 지혜의 진언",
+      "decision": "`vidyā`는 앎·명지·밝은 지식이며 의례 문맥에서는 주문 계열의 명칭이기도 하다. `prajñā`와 완전히 같은 말은 아니다.",
+      "conventional_reading": "대명주",
+      "unit_ids": [
+        "hs-013"
+      ]
+    },
+    {
+      "id": "term-43",
+      "chinese": "無上咒",
+      "sanskrit_comparison": "`anuttaramantra`",
+      "translation": "그보다 높은 것이 없는 진언",
+      "decision": "`anuttara`의 부정 구조를 풀어 번역했다.",
+      "conventional_reading": "무상주",
+      "unit_ids": [
+        "hs-013"
+      ]
+    },
+    {
+      "id": "term-44",
+      "chinese": "無等等咒",
+      "sanskrit_comparison": "GRETIL `samasamamantra`; Conze 교정본의 독법 `asamasamamantra`",
+      "translation": "견줄 것이 없는 진언",
+      "decision": "현재 번역은 T251과 `asamasama` 독법에 잘 맞는다. Conze의 독법은 아래 Attwood 논문 p.27의 인용에서 확인했다. GRETIL의 `samasama`를 이 한문의 유일한 직역 근거로 제시하지 않는다.",
+      "conventional_reading": "무등등주",
+      "unit_ids": [
+        "hs-013"
+      ]
+    },
+    {
+      "id": "term-45",
+      "chinese": "能除一切苦",
+      "sanskrit_comparison": "`sarvaduḥkhapraśamana`",
+      "translation": "모든 괴로움을 없앰",
+      "decision": "`praśamana`는 가라앉힘·진정·소멸에 가깝고 T251의 `能除`는 능히 제거한다는 효능을 드러낸다. 본문은 한문을 따른다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-014"
+      ]
+    },
+    {
+      "id": "term-46",
+      "chinese": "真實不虛",
+      "sanskrit_comparison": "`satyam amithyatvāt`",
+      "translation": "참되어 헛되지 않음",
+      "decision": "산스크리트는 `거짓되지 않기 때문에 참이다`라는 인과 문법이지만 T251은 병렬식이다. 본문은 T251을 따른다.",
+      "conventional_reading": null,
+      "unit_ids": [
+        "hs-014"
+      ]
+    }
+  ]
+}

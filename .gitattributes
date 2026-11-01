@@ -1,0 +1,3 @@
+data/** text eol=lf
+reader/** text eol=lf
+scripts/*.py text eol=lf

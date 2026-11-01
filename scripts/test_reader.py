@@ -1,0 +1,88 @@
+"""Regression checks for lossless migration and reader integrity (stdlib only)."""
+import copy
+import importlib.util
+from pathlib import Path
+import tempfile
+import unittest
+
+spec=importlib.util.spec_from_file_location("build_reader",Path(__file__).with_name("build_reader.py"))
+reader=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(reader)
+
+class ReaderTests(unittest.TestCase):
+    def setUp(self):
+        self.data=reader.read_data()
+
+    def test_canonical_translation_matches_generated_document(self):
+        text=(reader.ROOT/"translation/01-heart-sutra.md").read_text(encoding="utf-8")
+        self.assertEqual(reader.markdown(self.data),text)
+
+    def test_duplicate_ids_fail(self):
+        self.data["units"][1]["id"]=self.data["units"][0]["id"]
+        with self.assertRaisesRegex(ValueError,"Duplicate"):
+            reader.validate(self.data)
+
+    def test_dangling_note_and_term_fail(self):
+        for kind,key in [("units","note_ids"),("terms","unit_ids")]:
+            changed=copy.deepcopy(self.data)
+            changed[kind][0][key].append("missing")
+            with self.assertRaisesRegex(ValueError,"Dangling"):
+                reader.validate(changed)
+
+    def test_source_tamper_fails(self):
+        import json
+        lock=json.loads((reader.ROOT/"data/source-lock.json").read_text(encoding="utf-8"))
+        raw=reader.source_bytes(lock)
+        reader.check_source(self.data,raw)
+        changed=copy.deepcopy(self.data)
+        changed["units"][0]["chinese"]=changed["units"][0]["chinese"].replace("觀","見",1)
+        with self.assertRaisesRegex(ValueError,"Chinese differs"):
+            reader.check_source(changed,raw)
+
+    def test_html_is_escaped(self):
+        self.data["translation_blocks"][0]["segments"][0]["text"]='<img src=x onerror=alert(1)> </script>'
+        rendered=reader.render(self.data)
+        self.assertNotIn('<img src=x',rendered)
+        self.assertIn('&lt;img src=x',rendered)
+        self.assertNotIn('</script>"',rendered)
+
+    def test_static_links_and_ids_resolve(self):
+        from html.parser import HTMLParser
+        class Anchors(HTMLParser):
+            def __init__(self):
+                super().__init__(); self.ids=[]; self.targets=[]
+            def handle_starttag(self,tag,attrs):
+                attrs=dict(attrs)
+                if 'id' in attrs:self.ids.append(attrs['id'])
+                if tag=='a' and attrs.get('href','').startswith('#'):self.targets.append(attrs['href'][1:])
+        parser=Anchors(); parser.feed(reader.render(self.data))
+        self.assertEqual(len(parser.ids),len(set(parser.ids)))
+        self.assertTrue(set(parser.targets)<=set(parser.ids))
+
+    def test_build_is_deterministic(self):
+        import json
+        lock=json.loads((reader.ROOT/"data/source-lock.json").read_text(encoding="utf-8"))
+        raw=reader.source_bytes(lock)
+        cache=reader.ROOT/".cache"
+        cache.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=cache) as tmp:
+            first,second=Path(tmp)/"a",Path(tmp)/"b"
+            reader.build(self.data,raw,first); reader.build(self.data,raw,second)
+            files=[p.relative_to(first) for p in first.rglob('*') if p.is_file()]
+            self.assertEqual(sorted(map(str,files)),sorted(str(p.relative_to(second)) for p in second.rglob('*') if p.is_file()))
+            for path in files:self.assertEqual((first/path).read_bytes(),(second/path).read_bytes())
+
+    def test_stale_generated_asset_fails(self):
+        import json
+        lock=json.loads((reader.ROOT/"data/source-lock.json").read_text(encoding="utf-8"))
+        raw=reader.source_bytes(lock)
+        with tempfile.TemporaryDirectory(dir=reader.ROOT/".cache") as tmp:
+            output=Path(tmp).resolve()
+            self.assertTrue(output.is_relative_to(reader.ROOT.resolve()))
+            reader.build(self.data,raw,output)
+            (output/"reader.js").write_text("stale",encoding="utf-8")
+            with self.assertRaisesRegex(ValueError,"stale"):
+                reader.check_outputs(self.data,raw,output)
+
+if __name__=="__main__":
+    unittest.main()

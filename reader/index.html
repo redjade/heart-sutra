@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="반야심경 한글 번역을 읽고, 현장 한역·현토 독음·번역 주·용어 대응을 구절별로 살펴봅니다.">
+<meta name="color-scheme" content="light">
+<title>반야심경 · 읽기와 대조</title>
+<link rel="stylesheet" href="reader.css">
+<script src="reader.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header"><a href="#reading" class="brand">경전을 읽는 자리 <span>／ 반야심경</span></a><span class="draft">번역·교정 중인 초안</span></header>
+<div class="page">
+<aside class="rail" aria-label="구절 차례"><p class="eyebrow">HEART SUTRA</p><h2>구절 따라 읽기</h2><nav>@@NAV@@</nav><p class="rail-foot">소제목과 구절 번호는<br>읽기를 위한 편집상 안내입니다.</p></aside>
+<main id="main">
+<section class="intro"><p class="eyebrow">지혜의 완성 · 핵심을 읽다</p><h1>반야심경</h1><p class="original-title" lang="zh-Hant">般若波羅蜜多心經</p><p class="description">한글로 이어 읽고,<br class="mobile-break"> 한 구절에서 원문과 뜻을 함께 살핍니다.</p>
+<details class="guide"><summary>기준본과 읽는 방법 <span aria-hidden="true">＋</span></summary><div><p>현장 역 T08 No.251의 CBETA 교감 주본문 260자를 기준으로 합니다. 산스크리트 소본은 어휘와 판본 차이를 살피는 대조 자료이며, 한문과 같은 본문으로 합치지 않습니다. 이 경의 빨리어 원전을 제시하는 자료는 아닙니다.</p><p>‘읽기’에서는 기존 문단을 따라 읽습니다. 구절을 누르면 관련 번역 주와 용어를 볼 수 있습니다. ‘원문 대조’의 현토 독음은 한문의 전통적인 한글 독음이며, 마지막 진언의 한글 본문은 산스크리트 소리를 따릅니다.</p><p><a href="SOURCES.md">번역 근거와 판본 기록</a> · <a href="sources/T08n0251.xml">기준 XML 원문과 전체 헤더</a> · <a href="translation.md">한글·한문 문서</a> · <a href="heart-sutra.json">구절별 자료</a></p></div></details>
+</section>
+<div class="tools"><nav class="tabs" aria-label="읽기 방식"><a href="#reading" data-view="reading" aria-current="page">읽기</a><a href="#parallel" data-view="parallel">원문 대조</a><a href="#notes" data-view="notes">번역 주 <span>16</span></a><a href="#terms" data-view="terms">용어 대응</a></nav><div class="preferences"><button type="button" id="smaller" aria-label="본문 글자 작게">가−</button><button type="button" id="larger" aria-label="본문 글자 크게">가＋</button></div></div>
+<form class="search" role="search"><label for="query">본문·용어 찾기</label><input id="query" type="search" placeholder="공, 오온, rūpa…" autocomplete="off"><button type="submit">찾기</button></form>
+<section id="search-results" aria-label="검색 결과" hidden><p id="result-count" role="status"></p><div id="results"></div></section>
+<section id="reading" class="view reading-view" aria-labelledby="reading-title"><div class="section-heading"><h2 id="reading-title">한글 번역</h2><span>구절을 누르면 더 살펴볼 수 있습니다</span></div><div class="scripture">@@READING@@</div><p class="end-mark" aria-hidden="true">○</p><a class="next-link" href="#parallel" data-view="parallel">원문과 나란히 읽기 <span aria-hidden="true">↗</span></a></section>
+<section id="parallel" class="view" aria-labelledby="parallel-title"><div class="section-heading"><h2 id="parallel-title">원문 대조</h2><label class="reading-option"><input id="show-reading" type="checkbox" checked> 현토 독음</label></div><p class="section-description">한글 번역 · 현장 한역 T251<br>산스크리트 대조와 판본 차이는 각 구절의 번역 주에서 확인합니다.</p>@@PARALLEL@@</section>
+<section id="notes" class="view" aria-labelledby="notes-title"><div class="section-heading"><h2 id="notes-title">번역 주</h2><span>해석과 판본 차이를 구별하여</span></div><p class="section-description">기존 번역 주 16개를 그대로 수록했습니다. 관련 구절을 따라 본문으로 돌아갈 수 있습니다.</p>@@NOTES@@</section>
+<section id="terms" class="view" aria-labelledby="terms-title"><div class="section-heading"><h2 id="terms-title">용어 대응표</h2><span>한역 · 원어 대조 · 이 번역</span></div><p class="section-description">산스크리트 칸에는 기존 근거 기록의 대조 어구를 수록했습니다. 한역과 문법·문구가 다른 경우는 선택 이유에 남겼습니다. 작은 한글 표기는 한역 용어의 관용 독음입니다. 일반적인 한국어 번역어를 출처별로 비교하는 작업은 아직 포함하지 않았습니다.</p><div class="term-grid">@@TERMS@@</div></section>
+<footer><p>반야심경 번역 프로젝트 · 읽기와 대조 시범판</p><p><a href="https://github.com/redjade/heart-sutra">번역 저장소</a> · <a href="SOURCES.md">출처와 대조 기록</a> · <a href="LICENSE.md">이용 조건</a></p><p>한국어 번역·번역 주·도구 CC BY-NC-SA 4.0. CBETA 원문은 원래의 전체 헤더와 이용 조건을 함께 보존합니다.</p></footer>
+</main></div>
+<dialog id="inspector" aria-labelledby="inspector-title"><header><div><p class="eyebrow">구절 살피기</p><h2 id="inspector-title"></h2></div><button type="button" id="close-inspector" aria-label="구절 살피기 닫기">닫기 ×</button></header><div id="inspector-content"></div></dialog>
+<script id="reader-data" type="application/json">@@DATA@@</script>
+</body></html>
