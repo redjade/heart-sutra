@@ -41,6 +41,31 @@ class ReaderTests(unittest.TestCase):
             for field in ["sanskrit_comparison","translation","decision"]:
                 self.assertIn(term[field],terms)
 
+    def test_reading_edition_keeps_content_together_before_navigation(self):
+        import re
+        reading=reader.markdown_documents(self.data)[reader.ROOT/"reader/korean.md"]
+        visible=re.sub(r'<a name="[^"]+"></a>',"",reading)
+        self.assertEqual(re.findall(r"^## (.+)$",visible,re.M),[
+            "한글 번역","번역 주","한문과 현토 독음","더 살펴보기",
+        ])
+        main,navigation=reading.split("\n\n---\n\n## 더 살펴보기",1)
+        self.assertNotRegex(main,r"\]\(")
+        self.assertTrue(main.rstrip().endswith(self.data["units"][-1]["reading"]))
+        for note in self.data["notes"]:
+            self.assertIn(note["text"],main)
+        for unit in self.data["units"]:
+            self.assertIn(unit["chinese"],main)
+            self.assertIn(unit["reading"],main)
+        self.assertIn("parallel.md",navigation)
+        self.assertIn("terms.md",navigation)
+        # Visible reading content matches the original, apart from hidden anchors
+        # and the equivalent Markdown hard-break spelling.
+        plain=re.sub(r"<!--.*?-->","",main,flags=re.S)
+        plain=re.sub(r'<a name="[^"]+"></a>',"",plain)
+        plain=plain.replace("\\\n","  \n")
+        plain=re.sub(r"\n{3,}","\n\n",plain).strip()
+        self.assertEqual(plain,reader.markdown(self.data).strip())
+
     def test_broken_markdown_return_link_fails(self):
         documents=reader.markdown_documents(self.data)
         path=reader.ROOT/"reader/notes.md"
