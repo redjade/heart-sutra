@@ -14,8 +14,17 @@ class ReaderTests(unittest.TestCase):
         self.data=reader.read_data()
 
     def test_canonical_translation_matches_generated_document(self):
-        text=(reader.ROOT/"translation/01-heart-sutra.md").read_text(encoding="utf-8")
-        self.assertEqual(reader.markdown(self.data),text)
+        text=(reader.ROOT/"reader/korean.md").read_text(encoding="utf-8")
+        self.assertEqual(reader.markdown_documents(self.data)[reader.ROOT/"reader/korean.md"],text)
+
+    def test_archive_is_not_an_output_and_old_directory_is_not_recreated(self):
+        import json
+        lock=json.loads((reader.ROOT/"data/source-lock.json").read_text(encoding="utf-8"))
+        raw=reader.source_bytes(lock)
+        for path in reader.outputs(self.data,raw,reader.ROOT/"dist"):
+            self.assertFalse(path.is_relative_to(reader.ROOT/"archive"))
+            self.assertFalse(path.is_relative_to(reader.ROOT/"translation"))
+        self.assertFalse((reader.ROOT/"translation").exists())
 
     def test_markdown_reading_preserves_paragraphs_and_text(self):
         import re

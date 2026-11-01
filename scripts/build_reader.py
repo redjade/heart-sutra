@@ -92,7 +92,7 @@ def reading_footer(kind):
 
 def markdown_documents(data):
     """Reader-oriented Markdown, with a shared graph of stable named anchors."""
-    documents = {ROOT / "translation/01-heart-sutra.md": markdown(data)}
+    documents = {}
     units = data["units"]
 
     reading = reading_header("korean", data["title"])

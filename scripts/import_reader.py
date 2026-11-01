@@ -7,6 +7,7 @@ import subprocess
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
+IMPORT_COMMIT = "511e0914c9bf07027b59db12592db015cbc8bb92"
 CBETA_COMMIT = "dbdea41071e1e260ad84b72faefd4587333cf76d"
 URL = f"https://raw.githubusercontent.com/cbeta-org/xml-p5/{CBETA_COMMIT}/T/T08/T08n0251.xml"
 LABELS = ["다섯 무더기", "형상과 공", "나머지 네 무더기", "공의 특징", "오온의 부정", "감각 기관과 대상", "감각 영역", "무명에서 늙음과 죽음까지", "괴로움과 길, 앎과 얻음", "마음에 걸림이 없음", "두려움과 열반", "세 시대의 부처", "지혜의 완성과 진언", "진언의 선언", "진언을 말함", "진언"]
@@ -15,11 +16,17 @@ READINGS = {"般若":"반야", "波羅蜜多":"바라밀다", "般若波羅蜜�
 # Editorial cross-references, not automated word matching or Sanskrit alignment.
 TERM_UNITS = [[1,10,12,13,14],[1,10,12,13,14],[1,10,12,13,14],[],[1],[1,10],[1],[1],[1],[1],[1],[2,4],[2,5,6],[3,5],[3,5],[3,5],[3,5],[1,2,4,5],[2],[4],[4],[4],[4],[4],[6],[6],[7],[8],[8],[9],[9],[9],[10],[10,12],[10],[11],[11],[11],[12],[12],[13],[13],[13],[13],[14],[14]]
 
+def imported_text(path):
+    """Read the original import snapshot; archived files are never live inputs."""
+    return subprocess.check_output(
+        ["git", "show", f"{IMPORT_COMMIT}:{path}"], cwd=ROOT,
+    ).decode("utf-8").replace("\r\n", "\n")
+
 def main():
     destination = ROOT / "data/heart-sutra.json"
     if destination.exists():
         raise SystemExit("Refusing to overwrite canonical data")
-    original = (ROOT / "translation/01-heart-sutra.md").read_text(encoding="utf-8")
+    original = imported_text("translation/01-heart-sutra.md")
     korean = original.split("## 한글 번역\n\n")[1].split("\n\n## 번역 주")[0]
     paragraphs = korean.split("\n\n")
     assert len(paragraphs) == 11
@@ -43,7 +50,7 @@ def main():
     note_text = original.split("## 번역 주\n\n")[1].split("\n\n## 한문과 현토 독음")[0]
     notes = [{"id":f"note-{int(n):02}","number":int(n),"text":text,"gap_after":"\n\n" if int(n)==15 else "\n"} for n,text in re.findall(r"^(\d+)\. (.+)$",note_text,re.M)]
     terms=[]
-    for line in (ROOT / "SOURCES.md").read_text(encoding="utf-8").splitlines():
+    for line in imported_text("SOURCES.md").splitlines():
         if not line.startswith("| `"):
             continue
         cells=[cell.strip() for cell in line.strip("|").split("|")]
@@ -51,7 +58,7 @@ def main():
         chinese=cells[0].strip("`")
         terms.append({"id":f"term-{len(terms)+1:02}","chinese":chinese,"sanskrit_comparison":cells[1],"translation":cells[2],"decision":cells[3],"conventional_reading":READINGS.get(chinese),"unit_ids":[f"hs-{n:03}" for n in TERM_UNITS[len(terms)]]})
     assert len(terms)==len(TERM_UNITS), (len(terms),len(TERM_UNITS))
-    revision=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip()
+    revision=IMPORT_COMMIT
     data={"schema_version":1,"work_id":"heart-sutra","title":"반야바라밀다심경(般若波羅蜜多心經)","short_title":"반야심경","status":"번역·교정 중인 초안","base_witness":"현장 역 T08 No.251 · CBETA 교감 주본문","comparison_witness":"GRETIL 산스크리트 소본 · 대응 어구와 판본 차이 대조","import":{"commit":revision,"markdown_sha256_lf":hashlib.sha256(original.encode()).hexdigest(),"terms_source":"SOURCES.md · 2026-11-01 반입 당시 표의 문구"},"translation_blocks":blocks,"units":units,"notes":notes,"terms":terms}
     raw=urllib.request.urlopen(URL,timeout=30).read()
     destination.parent.mkdir(exist_ok=True)

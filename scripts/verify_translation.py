@@ -22,8 +22,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cbeta", action="store_true")
     args = parser.parse_args()
-    path = ROOT / "translation" / "01-heart-sutra.md"
+    path = ROOT / "reader" / "korean.md"
     text = path.read_text(encoding="utf-8")
+    # Check the active reading edition, without its invisible navigation anchors
+    # or the supplementary links collected at the end.
+    text = re.sub(r'<a name="[^"]+"></a>', "", text)
+    text = text.split("\n---\n", 1)[0]
     assert re.findall(r"^## (.+)$", text, re.MULTILINE) == [
         "한글 번역", "번역 주", "한문과 현토 독음"
     ], "Unexpected section order"
@@ -33,18 +37,18 @@ def main():
     assert len(lines) % 2 == 0, "Incomplete Chinese/reading pair"
     chinese = ""
     for source, reading in zip(lines[::2], lines[1::2]):
-        assert re.fullmatch(r"\*\*.+\*\*  ", source), "Missing bold Chinese or Markdown line break"
+        assert re.fullmatch(r"\*\*.+\*\*\\", source), "Missing bold Chinese or Markdown line break"
         assert not CJK.search(reading), "Chinese character remains in Hangul reading"
         assert not reading.startswith(">"), "Unexpected reading blockquote"
         chinese += han(source)
     assert len(chinese) == 260, f"Expected 260 Chinese characters, got {len(chinese)}"
     for document in ROOT.rglob("*.md"):
-        if ".git" in document.parts:
+        if {".git", ".cache", "dist"}.intersection(document.relative_to(ROOT).parts):
             continue
         for target in re.findall(r"\]\(([^)]+)\)", document.read_text(encoding="utf-8")):
             if not re.match(r"https?://|#", target):
                 assert (document.parent / target.split("#", 1)[0]).exists(), (document, target)
-    print(f"PASS: headings, {len(lines) // 2} Chinese/reading pairs, 260 characters, quotes, local links")
+    print(f"PASS: active reading headings, {len(lines) // 2} Chinese/reading pairs, 260 characters, quotes, local links")
     if not args.cbeta:
         return
     with urllib.request.urlopen(CBETA, timeout=30) as response:

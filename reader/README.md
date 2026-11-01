@@ -8,12 +8,13 @@
 - [원전 고정 기록](../data/source-lock.json): CBETA 커밋·URL·전체 파일의 SHA-256을 고정한다. 원문 교체는 별도 대조와 검토가 필요하다.
 - [HTML 틀](index.html), [화면 스타일](assets/reader.css), [화면 동작](assets/reader.js): 본문을 다시 쓰지 않고 표시를 바꾼다.
 - [번역 근거](../SOURCES.md): 서지·해석·검토 이력의 연구 문서다. 그 안의 기존 용어 표는 반입 당시 기록으로 보존한다. 현재 용어 대응은 JSON에서 수정하며 새 판단의 근거와 날짜는 연구 문서에도 남긴다.
+- [번역 원칙](../STYLE.md): 문체·판본 차이·번역어 후보와 현토의 현재 기준이다.
 
-[마크다운 읽기판](korean.md), [구절별 대조](parallel.md), [번역 주](notes.md), [용어 대응](terms.md), [기존 통합 문서](../translation/01-heart-sutra.md)는 같은 자료에서 Python으로 생성한다. 생성된 문서에서 직접 번역을 고치지 않는다. 원본 JSON을 수정하고 생성 명령을 실행한다. `dist/` 웹 화면도 같은 자료에서 별도로 생성할 수 있다.
+[마크다운 읽기판](korean.md), [구절별 대조](parallel.md), [번역 주](notes.md), [용어 대응](terms.md)는 같은 자료에서 Python으로 생성한다. 생성된 문서에서 직접 번역을 고치지 않는다. 원본 JSON을 수정하고 생성 명령을 실행한다. `dist/` 웹 화면도 같은 자료에서 별도로 생성할 수 있다. 이전 통합 문서와 번역 목록·원칙은 [archive](../archive/README.md)에 보관하며 생성·편집 원본으로 사용하지 않는다.
 
 ## GitHub에서 읽는 구성
 
-저장소 [첫 화면](../README.md)에서 읽기판으로 들어간다. 읽기판은 제목에서 곧바로 한글 번역으로 이어지고, 기존 11개 문단 뒤에 번역 주·한문과 현토를 같은 문서에 둔다. 메뉴·초안 안내·참고 자료 링크는 맨 아래에 모은다. 본문에는 구절 번호·소제목·주석 표식을 끼워 넣지 않는다. 기존 `translation/01-heart-sutra.md`는 수정하지 않고 별도 읽기판 `reader/korean.md`를 재구성했다.
+저장소 [첫 화면](../README.md)에서 읽기판으로 들어간다. 읽기판은 제목에서 곧바로 한글 번역으로 이어지고, 기존 11개 문단 뒤에 번역 주·한문과 현토를 같은 문서에 둔다. 메뉴·초안 안내·참고 자료 링크는 맨 아래에 모은다. 본문에는 구절 번호·소제목·주석 표식을 끼워 넣지 않는다. 현재 번역은 `reader/korean.md`를 중심으로 읽고 검증한다.
 
 대조·별도 주석·용어 문서는 자세히 살펴볼 때 쓰는 참고 자료다. 문서 사이의 공통 메뉴는 이 문서들에서도 맨 아래로 옮겼다. 대조 문서는 한글·한문·현토를 세로로 배치하고, 관련 본문과 주석·용어로 이동할 수 있다.
 
@@ -21,7 +22,7 @@
 
 관리용 ID는 보이는 제목에서 덜고 문서의 고정 연결 지점으로 유지한다. 상대 경로와 `<a name="…"></a>` 연결 지점은 [GitHub의 문서 링크 규칙](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#custom-anchors)을 따른다. `hs-014`처럼 한글 두 문단에 걸치는 구절은 첫 위치로 돌아간다.
 
-기존 통합 문서는 이전 파일 경로와 내용을 보존한다. README에 있던 자세한 원전·라이선스 기록은 [REFERENCE.md](../REFERENCE.md)로 옮겼다.
+이전 `translation/`의 세 파일은 내용 그대로 `archive/translation/`로 옮겼다. 보관본은 다시 생성하거나 덮어쓰지 않는다. 번역 원칙은 저장소 최상위 [STYLE.md](../STYLE.md)에서 이어서 관리한다. README에 있던 자세한 원전·라이선스 기록은 [REFERENCE.md](../REFERENCE.md)에 있다.
 
 ## 자료 구조
 
@@ -68,7 +69,7 @@ uv run python scripts/verify_translation.py
 uv run python scripts/build_reader.py --check-migration
 ```
 
-이 명령은 **최초 이관 검사**다. 반입 커밋의 Markdown을 정확히 복원하는지 확인한다. 이후 번역을 의도적으로 수정한 뒤에는 같을 수 없으므로 통상 검사와 구별한다. 최초 시범판은 이 검사를 통과했다. `scripts/import_reader.py`는 최초 반입의 재현 기록이며 편집 원본이 있으면 덮어쓰기를 거부한다.
+이 명령은 **최초 이관 검사**다. 과거 반입 커밋의 Markdown을 정확히 복원하는지 확인하며 현재 보관본을 수정하지 않는다. 이후 번역을 의도적으로 수정한 뒤에는 같을 수 없으므로 통상 검사와 구별한다. 최초 시범판은 이 검사를 통과했다. `scripts/import_reader.py`는 고정된 과거 커밋에서 최초 반입을 재현하는 도구이며 편집 원본이 있으면 덮어쓰기를 거부한다. 현재 번역의 검증은 `reader/korean.md`와 편집 원본을 기준으로 한다.
 
 ```powershell
 uv run python -m http.server 8765 --bind 127.0.0.1 --directory dist
