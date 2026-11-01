@@ -17,6 +17,44 @@ class ReaderTests(unittest.TestCase):
         text=(reader.ROOT/"translation/01-heart-sutra.md").read_text(encoding="utf-8")
         self.assertEqual(reader.markdown(self.data),text)
 
+    def test_markdown_reading_preserves_paragraphs_and_text(self):
+        import re
+        documents=reader.markdown_documents(self.data)
+        reading=documents[reader.ROOT/"reader/korean.md"]
+        scripture=reading.split("<!-- scripture:start -->\n\n",1)[1].split("\n\n<!-- scripture:end -->",1)[0]
+        scripture=re.sub(r'<a name="[^"]+"></a>',"",scripture)
+        self.assertEqual(scripture,reader.korean(self.data))
+        self.assertEqual(len(scripture.split("\n\n")),11)
+        reader.check_markdown_links(documents)
+
+    def test_markdown_notes_terms_and_source_preserve_wording(self):
+        documents=reader.markdown_documents(self.data)
+        parallel=documents[reader.ROOT/"reader/parallel.md"]
+        notes=documents[reader.ROOT/"reader/notes.md"]
+        terms=documents[reader.ROOT/"reader/terms.md"]
+        for unit in self.data["units"]:
+            self.assertIn(unit["chinese"],parallel)
+            self.assertIn(unit["reading"],parallel)
+        for note in self.data["notes"]:
+            self.assertIn(note["text"],notes)
+        for term in self.data["terms"]:
+            for field in ["sanskrit_comparison","translation","decision"]:
+                self.assertIn(term[field],terms)
+
+    def test_broken_markdown_return_link_fails(self):
+        documents=reader.markdown_documents(self.data)
+        path=reader.ROOT/"reader/notes.md"
+        documents[path]=documents[path].replace("korean.md#hs-001","korean.md#hs-missing",1)
+        with self.assertRaisesRegex(ValueError,"Missing Markdown anchor"):
+            reader.check_markdown_links(documents)
+
+    def test_duplicate_markdown_anchor_fails(self):
+        documents=reader.markdown_documents(self.data)
+        path=reader.ROOT/"reader/korean.md"
+        documents[path]+='\n<a name="hs-001"></a>\n'
+        with self.assertRaisesRegex(ValueError,"Duplicate Markdown anchor"):
+            reader.check_markdown_links(documents)
+
     def test_duplicate_ids_fail(self):
         self.data["units"][1]["id"]=self.data["units"][0]["id"]
         with self.assertRaisesRegex(ValueError,"Duplicate"):

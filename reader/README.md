@@ -9,7 +9,17 @@
 - [HTML 틀](index.html), [화면 스타일](assets/reader.css), [화면 동작](assets/reader.js): 본문을 다시 쓰지 않고 표시를 바꾼다.
 - [번역 근거](../SOURCES.md): 서지·해석·검토 이력의 연구 문서다. 그 안의 기존 용어 표는 반입 당시 기록으로 보존한다. 현재 용어 대응은 JSON에서 수정하며 새 판단의 근거와 날짜는 연구 문서에도 남긴다.
 
-[기존 독송 문서](../translation/01-heart-sutra.md), [구절별 대조 문서](parallel.md), [용어 대응표](terms.md), `dist/` 웹 화면은 Python으로 생성한다. 생성된 문서에서 직접 번역을 고치지 않는다. 원본 JSON을 수정하고 생성 명령을 실행한다.
+[한글 이어 읽기](korean.md), [구절별 대조](parallel.md), [번역 주](notes.md), [용어 대응](terms.md), [기존 통합 문서](../translation/01-heart-sutra.md)는 같은 자료에서 Python으로 생성한다. 생성된 문서에서 직접 번역을 고치지 않는다. 원본 JSON을 수정하고 생성 명령을 실행한다. `dist/` 웹 화면도 같은 자료에서 별도로 생성할 수 있다.
+
+## GitHub에서 읽는 구성
+
+저장소 [첫 화면](../README.md)에서 한글 읽기로 들어간다. 한글 번역의 기존 11개 문단에는 주석 표식을 끼워 넣지 않고, 본문 아래에 구절·번역 주 찾아가기를 둔다. 대조 문서는 한글·한문·현토를 세로로 배치한다. 번역 주와 용어 설명 아래에는 관련 한글 본문과 대조 구절로 돌아가는 링크를 둔다.
+
+용어 대응의 첫 표는 두 열의 찾아보기다. 긴 산스크리트 어구와 선택 이유는 각 용어의 별도 설명에 보존한다. 일반 번역어의 출처별 용례 조사가 끝났다는 뜻은 아니다.
+
+관리용 ID는 보이는 제목에서 덜고 문서의 고정 연결 지점으로 유지한다. 상대 경로와 `<a name="…"></a>` 연결 지점은 [GitHub의 문서 링크 규칙](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#custom-anchors)을 따른다. `hs-014`처럼 한글 두 문단에 걸치는 구절은 첫 위치로 돌아간다.
+
+기존 통합 문서는 이전 파일 경로와 내용을 보존한다. README에 있던 자세한 원전·라이선스 기록은 [REFERENCE.md](../REFERENCE.md)로 옮겼다.
 
 ## 자료 구조
 
@@ -33,6 +43,15 @@
 ## 생성과 검증
 
 저장소 최상위에서 실행한다. Python 표준 라이브러리만 쓰며 추가 패키지는 필요 없다.
+
+마크다운만 생성·검사할 때에는 다음과 같이 실행한다. 이 명령은 웹 출력 폴더를 바꾸지 않는다.
+
+```powershell
+uv run python scripts/build_reader.py --markdown-only
+uv run python scripts/build_reader.py --markdown-only --check
+```
+
+웹의 로컬 출력까지 함께 생성·검사할 때에는 다음 명령을 쓴다. 생성 명령 자체는 사이트를 배포하지 않는다.
 
 ```powershell
 uv run python scripts/build_reader.py
@@ -59,6 +78,6 @@ uv run python -m http.server 8765 --bind 127.0.0.1 --directory dist
 
 ## 이번 시범판의 범위
 
-한글 이어 읽기, 한문·현토 대조, 구절별 주석 열기, 용어 대응, 본문·원어 검색, 글자 크기 조절과 고유 링크를 제공한다. 검증은 누락·문자 변조·잘못된 연결·중복 ID·생성 결과의 재현성을 확인한다. 번역 의미나 학술적 감수를 자동으로 확정하지 않는다.
+마크다운에서는 한글 이어 읽기, 한문·현토 대조, 번역 주, 용어 대응과 왕복 링크를 제공한다. 웹 시범판에서는 추가로 본문·원어 검색과 글자 크기 조절을 제공한다. 검증은 문구·문단 보존, 누락·문자 변조·잘못된 연결·중복 ID·생성 결과의 재현성을 확인한다. 번역 의미나 학술적 감수를 자동으로 확정하지 않는다.
 
 확대 전에는 실제 독자의 문단 길이·글자 크기·주석 이동 경험을 검토하고, 다른 경전의 문단·게송·장 구분·복수 원전도 손실 없이 표현되는지 추가 시범으로 확인한다.
